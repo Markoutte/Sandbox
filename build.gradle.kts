@@ -9,6 +9,7 @@ plugins {
     id("org.jetbrains.compose") version "1.5.11"
     id("org.springframework.boot") version "3.0.5"
     id("io.spring.dependency-management") version "1.0.11.RELEASE"
+    id("me.champeau.jmh") version "0.7.2"
 }
 
 val kotlinCoroutineVersion = "1.6.4"
@@ -36,8 +37,8 @@ dependencies {
     implementation("javax.xml.bind:jaxb-api:2.3.1")
     implementation("commons-cli:commons-cli:1.5.0")
     implementation("net.java.dev.jna:jna-platform:5.13.0")
-    implementation("org.openjdk.jmh:jmh-core:1.36")
-    implementation("org.openjdk.jmh:jmh-generator-annprocess:1.36")
+    implementation("org.openjdk.jmh:jmh-core:1.37")
+    implementation("org.openjdk.jmh:jmh-generator-annprocess:1.37")
     implementation("com.formdev:flatlaf:3.0")
     testImplementation("org.junit.jupiter:junit-jupiter-api:$junitVersion")
     testImplementation("org.junit.jupiter:junit-jupiter-engine:$junitVersion")

@@ -4,6 +4,7 @@ import me.markoutte.sandbox.algorithms.sort.*;
 import org.openjdk.jmh.annotations.*;
 
 import java.util.Arrays;
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 @Warmup(iterations = 10, time = 100, timeUnit = TimeUnit.MILLISECONDS)
@@ -14,10 +15,11 @@ import java.util.concurrent.TimeUnit;
 @State(Scope.Benchmark)
 public class SortBenchmark {
 
+    private static final Random r = new Random(0);
     private static final int[] origin = new int[10_000];
     static {
         for (int i = 0; i < origin.length; i++) {
-            origin[i] = origin.length - i;
+            origin[i] = r.nextInt();
         }
     }
 
